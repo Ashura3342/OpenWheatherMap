@@ -44,7 +44,7 @@ public class MainPresent<V extends IMainView>
                     getView().setCity(weather5Days.getCity());
                     getView().notifyWeatherInserted(getTripsRowsCount());
                 } else if (response.errorBody() != null)
-                    getView().showError(response.errorBody().toString());
+                    getView().showError(String.format("%d : %s", response.code(), response.message()));
             }
 
             @Override
