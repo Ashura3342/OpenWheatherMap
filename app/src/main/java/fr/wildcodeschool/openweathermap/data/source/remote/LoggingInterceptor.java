@@ -13,7 +13,7 @@ import retrofit2.internal.EverythingIsNonNull;
  */
 public class LoggingInterceptor implements Interceptor {
 
-    private static final String VALUE = "c664e84f0febb27d49e8811000bbde98";
+    private static final String VALUE = "YOUR_API";
     private static final String KEY = "APPID";
 
     private static LoggingInterceptor INSTANCE;
