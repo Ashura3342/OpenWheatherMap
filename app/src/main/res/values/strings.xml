@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OpenWeatherMap</string>
+    <string name="result_msg">Attempt to result</string>
+    <string name="date_example">01/01/1970</string>
+    <string name="desc_example">description</string>
+    <string name="temp_example">38°C</string>
+</resources>
