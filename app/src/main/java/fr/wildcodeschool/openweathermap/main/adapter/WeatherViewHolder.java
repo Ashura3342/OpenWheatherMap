@@ -8,6 +8,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import fr.wildcodeschool.openweathermap.R;
 
@@ -19,7 +20,7 @@ public class WeatherViewHolder
         implements IWeatherRowView {
 
     private DateFormat dateFormat
-            = new SimpleDateFormat("dd/MM/YYYY hh:mm aaa");
+            = new SimpleDateFormat("dd/MM/YYYY hh:mm aaa", Locale.getDefault());
 
     private TextView date;
     private TextView desc;
@@ -44,6 +45,7 @@ public class WeatherViewHolder
 
     @Override
     public void setTemp(float temp) {
-        this.temp.setText(String.format("%.2f°C", temp - 273.15));
+        this.temp.setText(String.format(Locale.getDefault(),
+                "%.2f°C", temp - 273.15));
     }
 }

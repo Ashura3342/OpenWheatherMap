@@ -1,5 +1,7 @@
 package fr.wildcodeschool.openweathermap.main;
 
+import java.util.Locale;
+
 import fr.wildcodeschool.openweathermap.base.BasePresenter;
 import fr.wildcodeschool.openweathermap.data.source.WeatherDataSource;
 import fr.wildcodeschool.openweathermap.data.source.remote.RemoteWeather;
@@ -44,7 +46,8 @@ public class MainPresent<V extends IMainView>
                     getView().setCity(weather5Days.getCity());
                     getView().notifyWeatherInserted(getTripsRowsCount());
                 } else if (response.errorBody() != null)
-                    getView().showError(String.format("%d : %s", response.code(), response.message()));
+                    getView().showError(String.format(Locale.getDefault(),
+                            "%d : %s", response.code(), response.message()));
             }
 
             @Override
