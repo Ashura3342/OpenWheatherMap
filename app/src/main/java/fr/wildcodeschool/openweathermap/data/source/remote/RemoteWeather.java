@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RemoteWeather {
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/";
 
-    private static RemoteWeather INSTANCE;
+    private static final RemoteWeather INSTANCE = new RemoteWeather();
     private WeatherDataSource weatherDataSource;
 
     private RemoteWeather() {
@@ -36,8 +36,6 @@ public class RemoteWeather {
     }
 
     public static RemoteWeather getInstance() {
-        if (INSTANCE == null)
-            INSTANCE = new RemoteWeather();
         return INSTANCE;
     }
 

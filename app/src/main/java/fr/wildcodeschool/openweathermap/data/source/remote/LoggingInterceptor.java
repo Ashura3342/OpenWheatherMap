@@ -16,14 +16,12 @@ public class LoggingInterceptor implements Interceptor {
     private static final String VALUE = "YOUR_API";
     private static final String KEY = "APPID";
 
-    private static LoggingInterceptor INSTANCE;
+    private static final LoggingInterceptor INSTANCE = new LoggingInterceptor();
 
     private LoggingInterceptor() {
     }
 
     public static LoggingInterceptor getInstance() {
-        if (INSTANCE == null)
-            INSTANCE = new LoggingInterceptor();
         return INSTANCE;
     }
 
